@@ -1,0 +1,25 @@
+{
+  "name": "nonisoft",
+  "version": "1.0.0",
+  "description": "Nonisoft web development agency website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skojic/nonisoft.git"
+  },
+  "author": "Srdjan Kojic",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/skojic/nonisoft/issues"
+  },
+  "homepage": "https://github.com/skojic/nonisoft#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
