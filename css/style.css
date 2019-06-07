@@ -67,7 +67,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #D63636, #810000);
+  background-image: linear-gradient(to right, #FF5E5E, #850000);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
@@ -99,6 +99,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .section-projects {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -106,12 +112,17 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right, rgba(214, 10, 10, 0.801), rgba(214, 54, 54, 0.801)), url(../img/low_angle.jpg);
+  background-image: linear-gradient(to right, rgba(214, 10, 10, 0.801), rgba(255, 94, 94, 0.801)), url(../img/low_angle.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-plans {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -151,6 +162,12 @@ body {
   color: #777; }
   .btn--white:after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #3a9f9f;
+  color: #fff; }
+  .btn--green:after {
+    background-color: #3a9f9f; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
@@ -213,18 +230,114 @@ body {
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
-    background-image: linear-gradient(to right, #D63636, #810000);
+    background-image: linear-gradient(to right, #FF5E5E, #850000);
     display: inline-block;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent; }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side {
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffa75e, #853c00); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #3a9f9f, #005050); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #4ccf4c, #006b00); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffa75e, #853c00), url(../img/plan-1.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #3a9f9f, #005050), url(../img/simple.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #4ccf4c, #006b00), url(../img/chalkboard.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 167, 94, 0.85), rgba(133, 60, 0, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(58, 159, 159, 0.85), rgba(0, 80, 80, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(76, 207, 76, 0.85), rgba(0, 107, 0, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 0.1rem solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right, rgba(214, 10, 10, 0.801), rgba(214, 54, 54, 0.801)), url(../img/artDeco.jpg);
+  background-image: linear-gradient(to right, rgba(214, 10, 10, 0.801), rgba(255, 94, 94, 0.801)), url(../img/artDeco.jpg);
   background-size: cover;
   background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
