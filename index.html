@@ -9,7 +9,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     
@@ -38,7 +37,11 @@
 
     <header class="header">
       <div class="header__logo-box">
-        <img srcset="./img/logo-X1.png 1x, ./img/logo-X2.png 2x" alt="Logo" class="header__logo ">
+        <picture class="header__logo">
+          <source srcset="./img/logo-X1.png 1x, ./img/logo-X2.png 2x" 
+          media="(max-width:37.5em)">
+          <img srcset="./img/logo-X1.png 1x, ./img/logo-X2.png 2x" alt="Nonisoft logo">
+        </picture>
       </div>
       <div class="header__text-box">
         <h1 class="heading-primary">
@@ -342,7 +345,12 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img srcset="./img/logo-X1.png 1x, ./img/logo-X2.png 2x" alt="Nonisoft logo" class="footer__logo">
+
+        <picture class="footer__logo">
+          <source srcset="./img/logo-X1.png 1x, ./img/logo-X2.png 2x" 
+          media="(max-width:37.5em)">
+          <img srcset="./img/logo-X1.png 1x, ./img/logo-X2.png 2x" alt="Nonisoft logo">
+        </picture>
         <div class="row">
           <div class="col-1-of-2">
             <div class="footer__navigation">
