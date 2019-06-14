@@ -14,7 +14,7 @@
     to right,
     rgba($color-primary, 0.801), 
     rgba($color-primary-light, 0.801)), 
-    url(../img/low_angle.jpg);
+    url(../img/low_angle.png);
     background-size: cover;
     transform: skewY(-7deg);
     margin-top: -10rem;
@@ -44,7 +44,7 @@
   position: relative;
 
   @include respond(tab-port) {
-    padding: 10rem 0; 
+    padding: 5rem 0; 
   }
 
 }
@@ -64,7 +64,7 @@
     rgba($color-white, .9) 0%,
     rgba($color-white, .9) 50%, 
     transparent 50%), 
-    url(../img/sign.jpg);
+    url(../img/sign.png);
   background-size: 100%;
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
@@ -74,7 +74,7 @@
     rgba($color-white, .9) 0%,
     rgba($color-white, .9) 65%,
     transparent 65%), 
-    url(../img/sign.jpg);
+    url(../img/sign.png);
     background-size: cover;
   }
 
@@ -82,7 +82,7 @@
     background-image: linear-gradient(to right, 
     rgba($color-white, .9) 0%,
     rgba($color-white, .9) 100%),
-    url(../img/sign.jpg);
+    url(../img/sign.png);
   }
 
   &__form {

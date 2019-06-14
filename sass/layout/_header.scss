@@ -4,7 +4,7 @@
     to right,
     rgba($color-primary, 0.801), 
     rgba($color-primary-light, 0.801)), 
-    url(../img/artDeco.jpg);
+    url(../img/artDeco.png);
     background-size: cover;
     background-position: center;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -19,6 +19,11 @@
       position: absolute;
       top: 7rem;
       left: 7rem;
+
+      @include respond(phone) {
+        top: 3rem;
+        left: 3rem;
+      }
     }
     &__logo {
       height: 3.5rem;
